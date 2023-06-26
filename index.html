@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <canvas id="confetti"></canvas>
+        
+    <main>
+        <section id="proccess" class="c-github align-items-center justify-content-center flex-column">
+            <h1 class="c-github__title w-100 mb-5">GitHubClone | My Pull Request</h1>
+
+            <div id="prequest" class="c-prequest w-100">
+                <figure class="c-prequest__icon">
+                    <img class="w-100 h-100" src="./images/icon.png" alt="">
+                </figure>
+                <div class="c-prequest__content">
+                    <div class="c-prequest__head align-items-center justify-content-between">
+                        <ul>
+                            <li>
+                                <button class="editorBtn active tab-option" data-item="prequest">
+                                    Write
+                                </button>
+                            </li>
+                            <li>
+                                <button class="previewBtn tab-option" data-item="prequest">
+                                        Preview
+                                </button>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <button class="strongBtn" data-item="prequest">
+                                        B
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="c-prequest__body">
+                        <div class="c-prequest__input">
+                            <div class="c-editor" data-item="prequest">
+                                <textarea id="prequestTextarea" data-item="prequest" class="w-100" placeholder="Leave a comment"></textarea>
+                                <span id="prequestFocus" class="focus"></span>
+                                <label class="c-editor__bottom-img position-relative w-100 m-0">
+                                    <input type="file" class="position-absolute w-100 h-100">
+                                    <span>
+                                        Attach files by dragging & dropping, selecting or pasting them.
+                                    </span>
+                                </label>
+                            </div>
+                            <div id="prequestPreview" class="c-preview d-none">
+                                <p>xxxxx</p>
+                            </div>
+                        </div>
+                        <div class="c-prequest__buttons d-flex justify-content-end">
+                            <button class="c-button c-button--ghost">Close Pull request</button>
+                            <button id="sendBtn" class="c-button c-button--primary">Comment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul id="savedList" class="c-savedList">
+
+            </ul>
+            <div id="c-finish" class="c-finish w-100 d-none">
+                <div id="prequest" class="c-prequest w-100">
+                    <figure class="c-prequest__icon">
+                        <img class="w-100 h-100" src="./images/ws.png" alt="">
+                    </figure>
+                    <div class="c-prequest__content">
+                        <div class="c-prequest__head c-prequest__head--comment align-items-center justify-content-between">
+                        </div>
+                        <div class="c-prequest__body">
+                            <button id="merge" class="c-button c-button--blue">Merge pull request</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <section id="success" class="c-success c-github align-items-center justify-content-center flex-column d-none">
+            <h1 class="c-github__title w-100 mb-5">GitHubClone | My Pull Request</h1>
+            <figure>
+                <img class="w-100" src="./images/success.png" alt="">
+            </figure>
+            <h2 class="c-github__title w-100 mb-5">PR was merged</h2>
+        
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.10.1/tsparticles.confetti.bundle.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

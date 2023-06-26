@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #0d1117;
+}
+
+.c-github {
+    padding: 50px;
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+}
+
+.c-github__title {
+    color: #c9c9c9;
+    max-width: 840px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.c-prequest {
+    max-width: 840px;
+    display: flex;
+    margin-top: 16px;
+}
+
+.c-prequest__icon  {
+    width: 40px;
+    height: 40px;
+}
+
+.c-prequest__icon img {
+    border-radius: 50%;
+    border-left: 1px solid #d0d7de42;
+    object-fit: cover;
+    object-position: center;
+}
+
+.c-prequest__content {
+    border: 1px solid #d0d7de42;
+    border-radius: 6px;
+    flex: 1;
+    margin-left: 16px;
+
+}
+
+.c-prequest__head {
+    background: #161b22;
+    padding: 8px 8px 0;
+    border-bottom: 1px solid #d0d7de42;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    position: relative;
+    display: flex;
+}
+
+.c-prequest__head::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 100%;
+    left: -5px;
+    width: 9px;
+    height: 9px;
+    pointer-events: none;
+    content: " ";
+    background: #161b22;
+    border-bottom: 1px solid #d0d7de42;
+    border-left: 1px solid #d0d7de42;
+    display: block;
+    transform: rotate(43deg);
+}
+
+.c-prequest__head ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+
+.c-prequest__head ul button {
+    padding: 8px 16px;
+    height: 100%;
+    color: #bababa;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.c-prequest__head ul li button.active {
+    background: #0d1117;
+    border: 1px solid #d0d7de42;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: none;
+    margin-bottom: -1px;
+
+}
+
+.c-prequest__body {
+    margin: 8px;
+}
+
+.c-editor {
+    overflow: hidden;
+    border-radius: 6px;
+    position: relative;
+}
+
+.focus {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #218bff;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+    border-radius: 6px;
+}
+
+.focus.active {
+    opacity: 1;
+}
+
+.c-editor textarea {
+    padding: 7px 10px;
+    font-size: 13px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border: 1px solid #d0d7de42;
+    border-bottom: 1px dashed #d0d7de42;
+    background: transparent;
+    outline: none;
+    color: white;
+    display: block;
+    min-height: 112px;
+    max-height: 265px;
+    padding: 8px;
+    resize: vertical;
+}
+
+.c-editor textarea:focus + .focus {
+    opacity: 1;
+}
+
+.c-editor__bottom-img {
+    background: #161b22;
+    color: #bababa;
+    font-size: 14px;
+    padding: 7px 10px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border: 1px solid #d0d7de42;
+    border-top: none;
+}
+
+.c-editor__bottom-img input {
+    top: 0;
+    left:0;
+    opacity: 0;
+}
+
+
+.c-preview {
+    padding: 8px;
+    color: #bababa;
+    border-bottom: 1px solid #d0d7de42;
+    min-height: 140px;
+}
+
+.c-preview img {
+    width: 250px;
+    display: block;
+}
+
+.c-prequest__buttons {
+    margin: 8px;
+}
+
+.c-button {
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    margin-left: 8px;
+    transition: all 0.5s;
+}
+
+.c-button--primary {
+    background: #1f883d;
+    color: #fff;
+    border-color: #1f883d;
+}
+
+.c-button--primary:hover,
+.c-button--primary:active,
+.c-button--primary:focus {
+    background: #167832;
+}
+
+.c-button--blue {
+    background: #1f6feb;
+    color: #fff;
+    border-color: #1f6feb;
+}
+
+.c-button--blue:hover,
+.c-button--blue:active,
+.c-button--blue:focus {
+    background: #1f6feb;
+}
+
+.c-button--ghost {
+    background: #21262d;
+    color: #c9d1d9;
+    border-color: #d0d7de42;
+}
+
+.c-button--ghost:hover,
+.c-button--ghost:active,
+.c-button--ghost:focus {
+    background: #1a1e24;
+}
+
+.c-prequest__head--comment {
+    padding: 0 16px;
+    color: #bababa;
+    font-size: 14px;
+    background: #121d2f;
+}
+
+.c-preview--comment {
+    border-bottom: none;
+    min-height: auto;
+}
+
+.c-autor-flag {
+    font-weight: 600;
+    border-radius: 20px;
+    border: 1px solid #d0d7de42;
+    padding: 0 7px;
+    margin-left: 5px;
+}
+
+.c-edit {
+    border: none;
+    background: transparent;
+    padding: 5px 4px 11px;
+    margin-left: 5px;
+    list-style: none;
+    width: 24px;
+    display: inline-block;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.c-edit__options {
+    top: calc(100% - 2px);
+    right: -5px;
+    border: 1px solid #d0d7de42;
+    border-radius: 6px;
+    background: #161b22;
+    width: 185px;
+}
+
+.c-edit__options::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    width: 9px;
+    height: 9px;
+    pointer-events: none;
+    content: " ";
+    background: #161b22;
+    border-bottom: 1px solid #d0d7de42;
+    border-left: 1px solid #d0d7de42;
+    display: block;
+    transform: rotate(140deg);
+}
+
+.c-edit__options button  {
+    background: transparent;
+    border: none;
+    color: #bababa;
+    padding: 4px 6px 4px 16px;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.c-edit__options button:hover,
+.c-edit__options button:active,
+.c-edit__options button:focus {
+    background: #121d2f;
+}
+
+.c-savedList {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.c-savedList li {
+    width: 100%;
+}
+
+.c-finish {
+   display: flex;
+   justify-content: center;
+}
+.c-success {
+    position: relative;
+}
+
+.c-success figure {
+    width: 250px;
+    margin: 0 auto;   
+}
+
+.c-success h2.c-github__title {
+    text-align: center;
+    font-size: 21px;
+}
+body  {
+    position: relative;
+}
+
+main {
+    position: relative;
+    z-index: 5;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.strongBtn{ 
+    font-weight: 800;
+}
